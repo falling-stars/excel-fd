@@ -4,7 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src"
+    "start": "node src",
+    "install": "npm i chalk exceljs&&npm i puppeteer --ignore-scripts&&npm audit fix"
   },
   "repository": {
     "type": "git",
