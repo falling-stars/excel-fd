@@ -13,6 +13,8 @@ module.exports = async () => {
   const sheet = workbook.getWorksheet('总表')
   rowCellCenter(sheet.getRow(1))
   rowCellCenter(sheet.getRow(2))
+  const lastRowIndex = sheet.actualRowCount
+  sheet.spliceRows(lastRowIndex, 1, null)
   // worksheet.getCell('A46').value = 'ppx'
   // worksheet.addRow([3, 'Sam', new Date()])
   await workbook.xlsx.writeFile(resolve(__dirname, '../kono.xlsx'))
